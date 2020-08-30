@@ -8,11 +8,13 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+    const [{user}, dispatch] = useStateValue();
     return (
         <div className="sidebar">
-            <SidebarRow src="user-demo.png"  title="Bipin Karki" />
+            <SidebarRow src={user.photoURL}  title={user.displayName} />
             <SidebarRow src="" Icon={LocalHospitalIcon} title="Covid-19 Information Center" />
             <SidebarRow src="" Icon={EmojiFlagsIcon} title="Pages" />
             <SidebarRow src="" Icon={PeopleIcon} title="Friends" />
