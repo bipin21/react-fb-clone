@@ -15,7 +15,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <SidebarRow src={user.photoURL}  title={user.displayName} />
-            <SidebarRow src="" Icon={LocalHospitalIcon} title="Covid-19 Information Center" />
+            <SidebarRow url="https://covid-tracker-react-f23bb.web.app/" src="" Icon={LocalHospitalIcon} title="Covid-19 Information Center" />
             <SidebarRow src="" Icon={EmojiFlagsIcon} title="Pages" />
             <SidebarRow src="" Icon={PeopleIcon} title="Friends" />
             <SidebarRow src="" Icon={ChatIcon} title="Messenger" />

@@ -2,12 +2,12 @@ import React from 'react'
 import './SidebarRow.css';
 import { Avatar } from '@material-ui/core';
 
-function SidebarRow({src, Icon, title}) {
+function SidebarRow({url, src, Icon, title, }) {
     return (
         <div className="sidebarRow">
             {src && <Avatar src={src} />}
             {Icon && <Icon />}
-            <p>{title}</p>
+            <a href={url && url}>{title}</a>
         </div>
     )
 }
